@@ -29,4 +29,13 @@ module.exports = {
       return res.json(results);
     });
   },
+
+  updateUsers: (req, res) => {
+    const sql = "UPDATE Students SET `Name`=?, `Email`=? WHERE ID=?";
+    const id = req.params.id;
+    con.query(sql, [req.body.name, req.body.email, id], (err, result) => {
+      if (err) return res.json({ Message: "Error inside server" });
+      return res.json(result);
+    });
+  },
 };

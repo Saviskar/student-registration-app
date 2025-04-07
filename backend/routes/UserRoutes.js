@@ -9,5 +9,6 @@ const router = express.Router();
 router.get("/read", UserController.getUsers);
 router.post("/create", UserController.createUsers);
 router.get("/read/:id", UserController.readUsers);
+router.put("/update/:id", UserController.updateUsers);
 
 module.exports = router;

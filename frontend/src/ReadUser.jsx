@@ -23,6 +23,13 @@ function ReadUser() {
       .catch((err) => console.log(err));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios.put("http://localhost:8081/user/update/${id}");
+    // .then((rest)=>)
+  };
+
   return (
     <div className="d-flex vh-100 bg-dark-subtle justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-3">
