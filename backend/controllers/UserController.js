@@ -38,4 +38,13 @@ module.exports = {
       return res.json(result);
     });
   },
+
+  deleteUser: (req, res) => {
+    const sql = "DELETE FROM Students WHERE ID = ?";
+    const id = req.params.id;
+    con.query(sql, [id], (err, result) => {
+      if (err) return res.json({ Message: "Error inside server" });
+      return res.json(result);
+    });
+  },
 };
