@@ -115,15 +115,6 @@ The frontend will usually run on `http://localhost:5173` and backend on `http://
 
 ---
 
-## 💡 Future Improvements
-
-- Add form validation (client + server side)
-- Connect to a database (e.g., MongoDB or MySQL)
-- Display registered students in a list
-- Edit/Delete student records
-
----
-
 ## 🙌 Acknowledgements
 
 - [React](https://reactjs.org/)
